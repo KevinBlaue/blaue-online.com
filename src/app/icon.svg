@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#0f172a" />
+  <!-- Terminal prompt chevron -->
+  <path
+    d="M5.5 11l5.5 5-5.5 5"
+    fill="none"
+    stroke="#10b981"
+    stroke-width="2.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- kb text as typed command -->
+  <text
+    x="14"
+    y="19.8"
+    fill="#e2e8f0"
+    font-family="ui-monospace, monospace"
+    font-size="12.5"
+    font-weight="700"
+    letter-spacing="0.3"
+  >kb</text>
+  <!-- Subtle top decorative dots (window chrome) -->
+  <circle cx="7.5" cy="5.5" r="1.2" fill="#334155" />
+  <circle cx="11.5" cy="5.5" r="1.2" fill="#334155" />
+  <circle cx="15.5" cy="5.5" r="1.2" fill="#334155" />
+</svg>

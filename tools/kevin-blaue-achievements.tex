@@ -1,0 +1,163 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[a4paper,top=14mm,bottom=14mm,left=18mm,right=18mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+
+\setmainfont{Roboto-Regular.ttf}[
+  Path = fonts/,
+  Renderer = HarfBuzz,
+  Ligatures = CommonOff,
+  BoldFont = Roboto-Regular.ttf,
+  ItalicFont = Roboto-Regular.ttf,
+  BoldItalicFont = Roboto-Regular.ttf,
+  BoldFeatures = {RawFeature={axis={wght=700}}},
+  BoldItalicFeatures = {RawFeature={axis={wght=700}}},
+  ItalicFeatures = {FakeSlant=0.2}
+]
+
+\definecolor{accent}{HTML}{1263E6}
+\definecolor{text}{HTML}{111827}
+\definecolor{muted}{HTML}{4B5563}
+\definecolor{rule}{HTML}{CBD5E1}
+\definecolor{panel}{HTML}{F1F5F9}
+\definecolor{permit}{HTML}{ECFDF5}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfauthor={Kevin Blaue},
+  pdfsubject={Architecture and delivery brief of Kevin Blaue, Backend and Cloud Software Developer in Calgary, AB},
+  pdfkeywords={Backend Developer, Cloud Developer, Software Developer, AWS, TypeScript, Node.js, Serverless, Software Architecture, BFF, Auth0, IAM, Calgary, Canada},
+  pdflang={en-CA},
+  pdftitle={Kevin Blaue - Architecture and Delivery Brief}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+\sloppy
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+\setlist[itemize]{
+  leftmargin=4.5mm,
+  itemsep=0.8mm,
+  topsep=1.2mm,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\newcommand{\sectiontitle}[1]{%
+  \vspace{3.2mm}%
+  {\large\bfseries\MakeUppercase{#1}}\\[-3mm]%
+  {\color{rule}\rule{\linewidth}{0.45pt}}%
+  \vspace{1.2mm}%
+}
+
+% Label and text share one paragraph so text extraction keeps them together.
+\newcommand{\scoperow}[2]{%
+  \par\hangindent=38mm\hangafter=1%
+  \makebox[38mm][l]{\bfseries\color{accent}#1:}#2\par\vspace{1.2mm}%
+}
+
+\newtcolorbox{briefcard}[1][]{%
+  colback=panel,
+  colframe=panel,
+  boxrule=0pt,
+  arc=1mm,
+  boxsep=2.2mm,
+  left=1.5mm,
+  right=1.5mm,
+  top=1.3mm,
+  bottom=1.3mm,
+  before upper={\raggedright},
+  #1
+}
+
+\begin{document}
+
+{\fontsize{27pt}{29pt}\selectfont\bfseries Kevin Blaue}\\[0.8mm]
+{\color{accent}\bfseries Backend / Cloud Software Developer | Architecture | AWS | TypeScript | Cross-Team Delivery}\\[0.8mm]
+{\color{muted}\small Architecture and delivery brief for backend, cloud, platform, and related software engineering roles in Canada.}
+
+\vspace{2.2mm}
+\begin{tcolorbox}[
+  colback=permit,
+  colframe=permit,
+  boxrule=0pt,
+  arc=1mm,
+  boxsep=1.8mm,
+  left=1.5mm,
+  right=1.5mm,
+  top=1mm,
+  bottom=1mm
+]
+\textbf{Work authorization:} based in Calgary, AB, with a Canadian IEC open work permit.
+Available now; no employer sponsorship required.
+\end{tcolorbox}
+
+\sectiontitle{Positioning}
+
+Backend-focused Software Developer with 6+ years of software development experience, including nearly 4 years full-time, building cloud services, APIs, authentication solutions, and production systems. Most recently served as the department's sole engineering representative in a core architecture group of about 10 members at freenet and owned the company's first BFF for two consumer brands. Previously contributed to six serverless backends across 18 AWS accounts.
+
+\sectiontitle{Recent Architecture and Delivery Ownership}
+
+\begin{tcbraster}[
+  raster columns=3,
+  raster equal height,
+  raster column skip=3mm,
+  raster left skip=0pt,
+  raster right skip=0pt
+]
+\begin{briefcard}
+\textbf{Architecture Governance}\\[0.5mm]
+Selected as the department's sole engineering representative in a core Architecture Management Group of about 10 members.
+\end{briefcard}
+\begin{briefcard}
+\textbf{First BFF Ownership}\\[0.5mm]
+Designed the company's first BFF for freenet and Klarmobil across QA and production, intended for campaigns reaching up to 500,000 customers.
+\end{briefcard}
+\begin{briefcard}
+\textbf{IAM Platform Work}\\[0.5mm]
+Developed and maintained central Auth0 login and authorization services for freenet and Klarmobil, integrated by the customer-portal frontend team.
+\end{briefcard}
+\end{tcbraster}
+
+\sectiontitle{Backend for Frontend - End-to-End Scope}
+
+\scoperow{Architecture}{Designed the two-tenant BFF architecture for freenet and Klarmobil, aligned it with internal standards, wrote the technical documentation, and defended the concept in architecture governance.}
+\scoperow{Planning}{Turned the approved concept into actionable Jira tasks and coordinated sequencing and distribution with the frontend team's Product Owner.}
+\scoperow{Cross-team delivery}{Worked directly with 2--3 frontend engineers, coordinated DNS and Cloudflare routing dependencies, and acted as the main technical contact for the consuming team.}
+\scoperow{Handover}{Taught API Gateway, Lambda, monitoring, and manual development deployments so the frontend team could maintain and extend the BFF independently before go-live.}
+
+\sectiontitle{Selected Earlier Delivery Signals}
+
+\begin{itemize}
+  \item Contributed to six serverless AWS backends across 18 development, QA, and production accounts, with substantial contributions to four services.
+  \item Helped build an hourly Glue pipeline that processed about 1 million Austrian and Swiss store-order records in six months and made physical-store purchases visible in customer online accounts.
+  \item Introduced Datadog and CloudWatch monitoring across all six backends in QA and production, linking metrics with logs to simplify incident investigation.
+  \item Led the Apple Wallet implementation for the online-account platform; onboarded two engineers and supported a third through the company buddy program.
+\end{itemize}
+
+\sectiontitle{AI-Assisted Engineering}
+
+Use AI to accelerate analysis, implementation, debugging, and review while retaining full responsibility for technical decisions. Generated solutions are evaluated for correctness, architectural fit, maintainability, security, and long-term sustainability; poor or over-engineered approaches are challenged and refined.
+
+\vfill
+{\small
+\href{mailto:kevin@blaue-online.com}{kevin@blaue-online.com}
+\hfill
+\href{https://www.blaue-online.com}{www.blaue-online.com}
+\hfill
+Calgary, \today
+}
+
+\end{document}

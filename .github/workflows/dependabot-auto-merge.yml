@@ -1,0 +1,22 @@
+name: Dependabot auto-merge
+
+on:
+  workflow_call:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  auto-merge-dependabot-pr:
+    if: github.event_name == 'pull_request' && github.base_ref == 'dependencies' && github.event.pull_request.user.login == 'dependabot[bot]' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    env:
+      PR_URL: ${{ github.event.pull_request.html_url }}
+      PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      # CI calls this workflow only after lint, tests, and build succeed.
+      # Direct merging does not require GitHub's optional auto-merge setting.
+      - name: Merge tested Dependabot PR
+        run: gh pr merge --merge --match-head-commit "$PR_HEAD_SHA" "$PR_URL"

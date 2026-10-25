@@ -1,0 +1,61 @@
+% One-page short resume. Build locally with: npm run pdf:resume:short
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[letterpaper,top=13mm,bottom=11mm,left=16mm,right=16mm]{geometry}
+\input{tools/kevin-blaue-resume-style.tex}
+
+\hypersetup{
+  pdfauthor={Kevin Blaue},
+  pdfsubject={One-page resume of Kevin Blaue, Backend and Cloud Software Developer in Calgary, AB},
+  pdfkeywords={Backend Developer, Cloud Developer, Software Developer, AWS, TypeScript, Node.js, Serverless, Software Architecture, BFF, Auth0, IAM, Calgary, Canada},
+  pdflang={en-CA},
+  pdftitle={Kevin Blaue - Short Resume}
+}
+
+\setlist[itemize]{itemsep=0.3mm,topsep=0.5mm}
+
+\begin{document}
+\resumeheader
+
+\vspace{2.5mm}
+\fontsize{9.7pt}{12pt}\selectfont
+
+\firstsectiontitle{Summary}
+Backend-focused Software Developer with 6+ years of software development experience, including nearly 4 years full-time, building AWS services, APIs, identity platforms, and production systems. Most recently served as the department's sole engineering representative in a core architecture group of about 10 members at freenet and owned the company's first BFF for freenet and Klarmobil, designed for campaigns reaching up to 500,000 customers. Previously contributed to six serverless backends across 18 AWS accounts. Based in Calgary with a Canadian IEC open work permit; no employer sponsorship required.
+
+\sectiontitle{Core Skills}
+\begin{itemize}
+  \skill{Backend \& Architecture}{TypeScript, JavaScript, Node.js, REST, GraphQL, OpenAPI/Swagger}
+  \skill{AWS \& Delivery}{AWS, Lambda, API Gateway, AWS CDK, DynamoDB, S3, AppSync, AWS Glue, CloudFormation, EventBridge, SQS, VPC, GitHub Actions, Serverless Framework}
+  \skill{Operations \& Security}{Datadog, CloudWatch, Sentry, Auth0, IAM, automated testing, incident response}
+  \skill{AI Systems \& Workflow}{Claude Code, GitHub Copilot, Cursor AI, prompt engineering, repository-level AI instructions, MCP context integration}
+  \skill{Familiar With}{Python, PHP, Java, Kotlin, C\#, Go, NestJS, React, Angular, Docker}
+\end{itemize}
+
+\sectiontitle{Relevant Experience}
+\role{Software Developer}{freenet DLS GmbH}{B\"udelsdorf, Germany}{Nov 2025 -- Sep 2026}
+\begin{itemize}
+  \item Selected as the department's sole engineering representative in a core Architecture Management Group of about 10 members.
+  \item Designed the company's first BFF for freenet and Klarmobil across QA and production, intended for tariff-change campaigns reaching up to 500,000 customers.
+  \item Worked directly with 2--3 frontend engineers on serverless delivery and handover; maintained central Auth0 services for both brands.
+\end{itemize}
+
+\role{Software Developer, Custom Software Engineering}{Fielmann Group AG}{Hamburg, Germany / Remote}{Nov 2022 -- Oct 2025}
+\begin{itemize}
+  \item Contributed to six serverless AWS backends across 18 development, QA, and production accounts, with substantial contributions to four services and one container-to-Lambda migration.
+  \item Helped build an hourly order-data pipeline that processed about 1 million Austrian and Swiss store-order records in six months; led the Apple Wallet integration for the online-account platform.
+  \item Introduced Datadog and CloudWatch monitoring across all six backends and onboarded two engineers while supporting a third through the company buddy program.
+\end{itemize}
+
+\role{Working Student, Full-Stack Developer}{1\&1 Versatel Deutschland GmbH}{Flensburg, Germany}{May 2019 -- Jul 2022}
+\begin{itemize}
+  \item Built internal and customer-contact applications, data-transfer workflows, and operational reporting across frontend, backend, and relational databases.
+\end{itemize}
+
+\sectiontitle{Education}
+B.Sc. Applied Computer Science, Hochschule Flensburg, Germany\hfill 2018 -- 2022\\
+B.A. Sociology, Georg-August University G\"ottingen, Germany\hfill 2013 -- 2017\par
+
+\sectiontitle{Languages}
+English (C1), German (native), French (basic)\par
+\end{document}

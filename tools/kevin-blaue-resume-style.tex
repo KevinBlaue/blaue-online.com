@@ -1,0 +1,80 @@
+% Shared visual system for Kevin Blaue's long and short resumes.
+% Deliberately plain: black text, one column, bold only for labels, no icons, so ATS and AI text extraction stay clean.
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{needspace}
+
+% TeX Gyre Heros is a Helvetica clone under the GUST Font License (see fonts/).
+\setmainfont{texgyreheros-regular.otf}[
+  Path = fonts/,
+  Renderer = HarfBuzz,
+  Ligatures = CommonOff,
+  BoldFont = texgyreheros-bold.otf
+]
+
+\definecolor{muted}{HTML}{5F6368}
+
+\hypersetup{hidelinks}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedright
+\sloppy
+
+\setlist[itemize]{
+  label={\raisebox{0pt}[0pt][0pt]{\large\textbullet}},
+  leftmargin=8.5mm,
+  labelsep=2.5mm,
+  itemsep=0.6mm,
+  topsep=0.8mm,
+  parsep=0pt,
+  partopsep=0pt,
+  % Keep each bullet on one page; extractors that drop the page break would otherwise glue words together.
+  before=\interlinepenalty 10000\relax
+}
+
+\newcommand{\resumeheader}{%
+  {\fontsize{22pt}{25pt}\selectfont\bfseries KEVIN BLAUE}\\[1.2mm]
+  % One contact item per line and full URLs as plain text, so every value survives text extraction.
+  Calgary, AB\\
+  +1 587 966 3500\\
+  \href{mailto:kevin@blaue-online.com}{kevin@blaue-online.com}\\
+  \href{https://www.linkedin.com/in/kevin-blaue-b09a9023b}{https://www.linkedin.com/in/kevin-blaue-b09a9023b}\hspace{2mm}|\hspace{2mm}%
+  \href{https://www.blaue-online.com}{https://www.blaue-online.com}\\
+  Approved Canadian IEC open work permit -- no sponsorship or LMIA required. Available immediately.\par
+}
+
+\newcommand{\sectiontitle}[1]{%
+  \Needspace{9mm}%
+  \vspace{3.6mm}%
+  {\fontsize{11.5pt}{13pt}\selectfont\bfseries\MakeUppercase{#1}}\\[-2.6mm]%
+  \rule{\linewidth}{0.6pt}%
+  \vspace{0.6mm}%
+}
+
+\newcommand{\firstsectiontitle}[1]{\sectiontitle{#1}}
+
+\newcommand{\role}[4]{%
+  \Needspace{22mm}%
+  \vspace{1.6mm}%
+  {\bfseries #1\hfill#4}\\%
+  \hspace*{1.5mm}#2, #3\par%
+}
+
+\newcommand{\education}[3]{%
+  \Needspace{10mm}%
+  \vspace{1.6mm}%
+  {\bfseries #1\hfill#2}\\%
+  \hspace*{1.5mm}#3\par%
+}
+
+% Use inside an itemize list.
+\newcommand{\skill}[2]{\item {\bfseries #1:} #2}
+
+\newcommand{\techstack}[1]{%
+  \vspace{0.2mm}%
+  {\leftskip=8.5mm\small\color{muted}Tech stack: #1\par}%
+}

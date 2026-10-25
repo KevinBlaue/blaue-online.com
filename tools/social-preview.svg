@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Kevin Blaue, Backend and Cloud Software Developer focused on architecture and cross-team delivery">
+  <rect width="1200" height="630" fill="#f6f7f4"/>
+  <rect x="72" y="72" width="1056" height="486" rx="28" fill="#0f172a"/>
+  <rect x="790" y="72" width="338" height="486" rx="28" fill="#132235"/>
+  <rect x="790" y="72" width="338" height="486" fill="#132235"/>
+
+  <text x="120" y="154" fill="#94a3b8" font-family="Arial, sans-serif" font-size="28" font-weight="700">BACKEND &amp; CLOUD DEVELOPER</text>
+  <text x="120" y="262" fill="#ffffff" font-family="Arial, sans-serif" font-size="80" font-weight="800">Kevin Blaue</text>
+  <text x="120" y="324" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="32" font-weight="500">AWS · TypeScript · Architecture · BFF</text>
+  <text x="120" y="404" fill="#e2e8f0" font-family="Arial, sans-serif" font-size="30" font-weight="700">Architecture into delivery</text>
+  <text x="120" y="448" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="25" font-weight="500">Governance, cross-team planning, and handover.</text>
+
+  <rect x="120" y="492" width="298" height="46" rx="23" fill="#ecfdf5"/>
+  <text x="146" y="523" fill="#047857" font-family="Arial, sans-serif" font-size="22" font-weight="700">Available now</text>
+  <rect x="436" y="492" width="228" height="46" rx="23" fill="#e0f2fe"/>
+  <text x="462" y="523" fill="#0369a1" font-family="Arial, sans-serif" font-size="22" font-weight="700">Calgary, AB</text>
+
+  <rect x="850" y="126" width="216" height="76" rx="12" fill="#f8fafc"/>
+  <text x="884" y="173" fill="#0f172a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Requirements</text>
+  <path d="M958 202v34" stroke="#34d399" stroke-width="6" stroke-linecap="round"/>
+  <path d="M946 224l12 12 12-12" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="850" y="236" width="216" height="76" rx="12" fill="#f8fafc"/>
+  <text x="900" y="283" fill="#0f172a" font-family="Arial, sans-serif" font-size="24" font-weight="700">BFF design</text>
+  <path d="M958 312v34" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+  <path d="M946 334l12 12 12-12" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="850" y="346" width="216" height="76" rx="12" fill="#f8fafc"/>
+  <text x="886" y="393" fill="#0f172a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Gov. review</text>
+  <path d="M958 422v34" stroke="#34d399" stroke-width="6" stroke-linecap="round"/>
+  <path d="M946 444l12 12 12-12" fill="none" stroke="#34d399" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="850" y="456" width="216" height="76" rx="12" fill="#ecfdf5"/>
+  <text x="898" y="503" fill="#047857" font-family="Arial, sans-serif" font-size="24" font-weight="700">Handover</text>
+</svg>

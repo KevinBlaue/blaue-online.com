@@ -1,0 +1,28 @@
+version: 2
+updates:
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
+    commit-message:
+      prefix: '🤖 [GH Actions]'
+      include: 'scope'
+    open-pull-requests-limit: 5
+    target-branch: 'main'
+
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'monthly'
+    target-branch: 'dependencies'
+    commit-message:
+      prefix: '🤖 [npm]'
+      include: 'scope'
+    open-pull-requests-limit: 5
+    groups:
+      all-deps:
+        patterns:
+          - '*'
+        update-types:
+          - 'minor'
+          - 'patch'

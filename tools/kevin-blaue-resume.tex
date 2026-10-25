@@ -1,0 +1,81 @@
+% Long resume. Build locally with: npm run pdf:resume
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage[letterpaper,top=17mm,bottom=16mm,left=19mm,right=19mm]{geometry}
+\input{tools/kevin-blaue-resume-style.tex}
+
+\hypersetup{
+  pdfauthor={Kevin Blaue},
+  pdfsubject={Resume of Kevin Blaue, Backend and Cloud Software Developer in Calgary, AB},
+  pdfkeywords={Backend Developer, Cloud Developer, Software Developer, AWS, TypeScript, Node.js, Serverless, AppSync, GraphQL, DynamoDB, AWS CDK, Auth0, Calgary, Canada},
+  pdflang={en-CA},
+  pdftitle={Kevin Blaue - Resume}
+}
+
+\begin{document}
+\resumeheader
+
+\vspace{3mm}
+\fontsize{10pt}{12.4pt}\selectfont
+Backend and Cloud Software Developer with 6+ years of software development experience, including nearly 4 years full-time, and 3+ years building and operating production serverless systems on AWS. Hands-on with AWS AppSync and GraphQL (JavaScript resolvers), DynamoDB data modeling with GSIs, AWS CDK with custom constructs, and multi-account Dev/QA/Prod delivery through GitHub Actions. Experienced in identity (Auth0/OIDC), observability (Datadog, CloudWatch), and cross-team delivery, including owning freenet's first Backend for Frontend from architecture through handover, and contributing to Fielmann's first central store for refraction data from in-store eye-testing devices.
+
+\sectiontitle{Skills}
+\begin{itemize}
+  \skill{Cloud Platforms}{AWS (Lambda, API Gateway, AppSync, DynamoDB, S3, Glue, VPC, Cognito, EventBridge, SNS, SQS, SES, CloudWatch, SecretsManager, X-Ray)}
+  \skill{IaC}{AWS CDK (custom constructs), CloudFormation, Serverless Framework}
+  \skill{CI/CD}{GitHub Actions, multi-account Dev/QA/Prod deployments, Docker}
+  \skill{APIs}{GraphQL (AWS AppSync, JavaScript resolvers), REST, OpenAPI/Swagger, WebSockets}
+  \skill{Programming}{TypeScript/JavaScript (Node.js), Python, Java, Kotlin}
+  \skill{Frontend}{React/Next.js, Angular}
+  \skill{Databases}{DynamoDB (GSI design), PostgreSQL, MySQL, MSSQL, OracleDB, SQLite}
+  \skill{Identity \& Security}{Auth0 (OIDC), AWS IAM, Cognito, penetration testing, GDPR-compliant logging}
+  \skill{Monitoring \& Testing}{Datadog, CloudWatch Logs Insights, CloudWatch Synthetics canaries, Sentry, Jest, PyTest, PHPUnit}
+  \skill{AI-Assisted Engineering}{Claude Code, GitHub Copilot, Cursor}
+\end{itemize}
+
+\sectiontitle{Experience}
+\role{Software Developer}{freenet DLS GmbH}{B\"udelsdorf, Germany}{11/2025 -- 09/2026}
+\begin{itemize}
+  \item Selected as the department's sole engineering representative in the core Architecture Management Group (\textasciitilde 10 members), contributing to company-wide standards and architecture decisions.
+  \item Designed the company's first Backend for Frontend (API Gateway, Lambda, TypeScript) for two brands, freenet and Klarmobil, across QA and production; wrote the technical documentation and defended the concept in architecture governance. Designed for tariff-change campaigns reaching up to 500,000 customers.
+  \item Worked directly with 2--3 frontend engineers on REST integration, monitoring, deployments, and Cloudflare/DNS routing; broke the concept down into Jira tasks with the Product Owner and enabled the team to own the BFF independently before go-live.
+  \item Developed and maintained central Auth0-based authentication services for end customers of both brands, integrated by the customer-portal frontend team, as well as authentication for IT systems (machine-to-machine); managed scopes, permissions, and production issue triage in Sentry.
+\end{itemize}
+\techstack{AWS, Lambda, API Gateway, TypeScript, REST, Auth0, Serverless Framework, Cloudflare, Sentry}
+
+\role{Software Developer, Custom Software Engineering}{Fielmann Group AG}{Hamburg, Germany (Remote)}{11/2022 -- 10/2025}
+\begin{itemize}
+  \item Contributed to the Measure Data Model (MDM) backend, which for the first time stored refraction data from in-store eye-testing devices in one central place for other applications -- the data foundation for Fielmann's Eye Check-up service. Supported the store rollouts in which the new devices were connected remotely to the Fielmann network.
+  \item Contributed to six serverless AWS backends across 18 accounts (Dev, QA, Prod), with substantial contributions to four services and one container-to-Lambda migration; built reusable AWS CDK constructs and deployed infrastructure through GitHub Actions pipelines.
+  \item Developed a production GraphQL API on AWS AppSync using JavaScript resolvers -- simple sorting and filtering directly in the resolver, AWS Lambda for complex logic -- secured via OIDC with Auth0 and connected through VPC private connectivity. Helped build the hourly AWS Glue pipeline feeding this consent-gated API, which processed \textasciitilde 1 million Austrian and Swiss store-order records in six months and made in-store purchases visible in customers' online accounts.
+  \item Designed DynamoDB data models for production services, using Global Secondary Indexes for additional access patterns (e.g. customer lookup by email alongside customer ID).
+  \item Maintained 150+ CloudWatch Synthetics canary end-to-end tests for one API and designed a retry mechanism for async timing issues, reducing failed test runs that required a manual workflow restart by about 80\% and shortening overall pipeline runtime.
+  \item Introduced Datadog and CloudWatch monitoring across all six backends in QA and production, including dashboards, alerting and incident-response processes, linking metrics with logs for faster incident investigation.
+  \item Led the Apple Wallet part of a digital customer card system (Apple/Google Wallet): full pass lifecycle, device registration and update callbacks, CORS and security controls, and synthetic test coverage.
+  \item Strengthened quality and security through automated tests, penetration testing and GDPR-compliant logging; onboarded two engineers and mentored a third through the company buddy program.
+\end{itemize}
+\techstack{AWS, TypeScript, CDK, Lambda, API Gateway, AppSync, GraphQL, DynamoDB, Glue, Datadog, GitHub Actions, Jest}
+
+\role{Working Student, Full-Stack Developer}{1\&1 Versatel Deutschland GmbH}{Flensburg, Germany}{05/2019 -- 07/2022}
+\begin{itemize}
+  \item Built Angular frontends integrated with RESTful backend endpoints (Laravel/PHP, C\#) for internal and customer-contact support systems.
+  \item Developed data-transfer workflows and reporting on relational databases (MSSQL, OracleDB) for support and business stakeholders.
+  \item Contributed across frontend, backend and automated testing (PHPUnit) while completing a B.Sc. in Applied Computer Science.
+\end{itemize}
+
+\sectiontitle{Personal Projects}
+\begin{itemize}
+  \item Bluestack (bluestack.cloud): self-hosted backend with JWT authentication; PostgreSQL in production, SQLite in development.\\
+    {\small\color{muted}Tech stack: Go, Java, TypeScript, Next.js}
+  \item Raspberry Pi home lab: two devices running self-hosted services (Pi-hole, a WebP image converter, an AI agent).
+\end{itemize}
+
+\sectiontitle{Language}
+\begin{itemize}
+  \item English (C1), German (native), French (basic)
+\end{itemize}
+
+\sectiontitle{Education}
+\education{B.Sc. Applied Computer Science}{2018 -- 2022}{Hochschule Flensburg, Germany -- Specialization: Human-Computer Interaction}
+\education{B.A. Sociology}{2013 -- 2017}{Georg-August University G\"ottingen, Germany}
+\end{document}

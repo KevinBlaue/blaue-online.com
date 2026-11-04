@@ -37,11 +37,12 @@ Backend and Cloud Software Developer with 6+ years of software development exper
 \role{Software Developer}{freenet DLS GmbH}{B\"udelsdorf, Germany}{11/2025 -- 09/2026}
 \begin{itemize}
   \item Selected as the department's sole engineering representative in the core Architecture Management Group (\textasciitilde 10 members), contributing to company-wide standards and architecture decisions.
-  \item Designed the company's first Backend for Frontend (API Gateway, Lambda, TypeScript) for two brands, freenet and Klarmobil, across QA and production; wrote the technical documentation and defended the concept in architecture governance. Designed for tariff-change campaigns reaching up to 500,000 customers.
-  \item Worked directly with 2--3 frontend engineers on REST integration, monitoring, deployments, and Cloudflare/DNS routing; broke the concept down into Jira tasks with the Product Owner and enabled the team to own the BFF independently before go-live.
-  \item Developed and maintained central Auth0-based authentication services for end customers of both brands, integrated by the customer-portal frontend team, as well as authentication for IT systems (machine-to-machine); managed scopes, permissions, and production issue triage in Sentry.
+  \item Led technical discovery for and designed the company's first Backend for Frontend (API Gateway, Lambda, TypeScript) for two brands, freenet and Klarmobil, across QA and production; wrote the technical documentation and defended the concept in architecture governance. Designed for tariff-change campaigns reaching up to 500,000 customers.
+  \item Worked directly with 2--3 frontend engineers on REST integration, monitoring, deployments, and Cloudflare/DNS routing; independently wrote the Jira stories for the concept, aligned with the frontend team's Product Owner, and enabled the team to own the BFF independently before go-live.
+  \item Worked on the central Auth0-based authentication for end customers of both brands, contributing to the registration flow; worked with JWT scopes and permissions for customer and machine-to-machine access, including token exchange through an internal Secure Token Service, and handled production issue triage in Sentry.
+  \item Wrote a resumable Python script on AWS EC2 that backfilled email-verification status for \textasciitilde 4.3 million customer accounts (\textasciitilde 3 million freenet, 1.3 million Klarmobil) on QA and production after a silent migration to Auth0, checkpointing progress so runs could safely resume after interruptions.
 \end{itemize}
-\techstack{AWS, Lambda, API Gateway, TypeScript, REST, Auth0, Serverless Framework, Cloudflare, Sentry}
+\techstack{AWS, Lambda, API Gateway, EC2, TypeScript, Python, REST, Auth0, Serverless Framework, Cloudflare, Sentry}
 
 \role{Software Developer, Custom Software Engineering}{Fielmann Group AG}{Hamburg, Germany (Remote)}{11/2022 -- 10/2025}
 \begin{itemize}
